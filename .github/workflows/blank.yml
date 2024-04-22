@@ -1,0 +1,20 @@
+name: CI
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version"
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Upload new release assets
+        uses: AButler/upload-release-assets@v3.0
+        with:
+          files: /**/*
+          repo-token: ${{ github.token }}
+          release-id: ${{ inputs.version }}
