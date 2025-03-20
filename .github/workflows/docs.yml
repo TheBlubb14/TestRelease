@@ -36,10 +36,10 @@ jobs:
             mkdocs-material-
 
       - name: Install mkdocs
-        run: pip install mkdocs mkdocs-material --site-dir "/docs-build"
+        run: pip install mkdocs mkdocs-material
 
       - name: Build the documentation
-        run: mkdocs build --config-file ${{ github.workspace }}/mkdocs.yml
+        run: mkdocs build --config-file ${{ github.workspace }}/mkdocs.yml --site-dir "/docs-build"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
