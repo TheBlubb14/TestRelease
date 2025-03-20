@@ -39,8 +39,8 @@ jobs:
           restore-keys: |
             mkdocs-material-
 
-      - name: Install mkdocs
-        run: pip install mkdocs mkdocs-material
+      - name: Install requirements
+        run: pip install -r
 
       - name: Build the documentation
         run: mkdocs build
