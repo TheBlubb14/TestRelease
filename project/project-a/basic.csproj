@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.6</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Blubber)' == 'asdf'">
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+  </PropertyGroup>
+
+</Project>
